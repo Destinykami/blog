@@ -184,7 +184,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">393</span>
+          <span class="site-state-item-count">395</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -233,6 +233,157 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/25/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E5%AF%92%E5%86%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/25/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E5%AF%92%E5%86%B0/" class="post-title-link" itemprop="url">2024春夏季开源操作系统训练营第一阶段总结-寒冰</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-25 03:45:00" itemprop="dateCreated datePublished" datetime="2024-04-25T03:45:00+00:00">2024-04-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-06-29 04:19:59" itemprop="dateModified" datetime="2024-06-29T04:19:59+00:00">2024-06-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5/" itemprop="url" rel="index"><span itemprop="name">2024春夏季开源操作系统训练营</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="呼-第一阶段就这样结束了呀！"><a href="#呼-第一阶段就这样结束了呀！" class="headerlink" title="呼~ 第一阶段就这样结束了呀！"></a>呼~ 第一阶段就这样结束了呀！</h2><p>自打去年从群友们那里了解到这个训练营之后就一直在关注了，<br>因为我对操作系统本身就很感兴趣，<br>加上又是使用 Rust 语言还能有一群小伙伴一起努力何尝不是一个很好的学习机会。<br>其实去年秋季也有报名过一次，惭愧的是因为各种原因第一阶段都没写完 uwu</p>
+<p>对于 Rust 这么个频繁被推荐的语言，难免是有些好奇的，<br>常常是拿出 《Rust 权威指南》然后翻过前几章与别的语言相差不大的那些部分后打算狠狠一顿学习，<br>但又是惭愧的是每次品鉴 “生命周期”、“所有权”、“动态分配 Trait” 等几个词语后便急忙把书塞回它该在的地方了。<br>可恶！怎么这么点字就是看不懂了 ——</p>
+<p>于是今年刚报名完春季的训练营后便暗自地赌气：我要一晚上做完第一阶段</p>
+<p>（是的，真的第一天晚上就做完了，鉴定为太能熬夜了）</p>
+<p>除了 Rustlings 外今年还添加了一部分数据结构和算法的内容，包括常见的队列、链表、二叉树和排序等，<br>而且比较有意思的是因为 Rust 对安全性要求很严苛，找出一种写法不使用 <code>unsafe</code> 也是一种很不错的挑战。</p>
+<p>三分时间写七分时间对付编译器那种（雾）</p>
+<p>后续的三周就比较空闲了，我终于找到了一个机会和理由把《Rust 权威指南》看完了，<br>后来还发现一本<a href="https://www.lurklurk.org/effective-rust/" target="_blank" rel="noopener">《Effective Rust》</a>类似是《Effective Java》或是 C/C++ 版本一样，通过一些案例说明什么写法是好的什么写法不太完美。<br>期间留下一些小笔记：<a href="https://blog.hanbings.io/posts/effective-rust/" target="_blank" rel="noopener">https://blog.hanbings.io/posts/effective-rust/</a></p>
+<p>总的来说，还是很感谢社区以一个这样的形式提供了一个这么好的学习机会，希望后续的学习还能够坚持下去吧！<br><strong>那么… 第二阶段见！</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/25/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-Silwings/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/25/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-Silwings/" class="post-title-link" itemprop="url">2024春夏季操作系统训练营第一阶段总结-Silwings</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-25 00:01:27" itemprop="dateCreated datePublished" datetime="2024-04-25T00:01:27+00:00">2024-04-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-06-29 04:19:59" itemprop="dateModified" datetime="2024-06-29T04:19:59+00:00">2024-06-29</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2022年在和同事聊天的时候了解到了Rust，在他的推荐下“投资未来”，学习了Rust这门语言。前期确实困难重重，Rust的<br>学习曲线确实比较陡峭，在三本Rust著作（《Rust权威指南》，《Rust实战》，《Rust程序设计》）和极客时间《陈天 · Rust编程第一课》的帮助下算是成功入门。</p>
+<p>2023年参加了“第三界中国Rust开发者大会”，收益破丰，也是在这里第一次了解到“操作系统训练营”，今年在公众号“Rust语言中文社区”<br>了解到2024训练营要开办了，果断报名。</p>
+<p>希望通过训练营的学习与实践能进一步夯实Rust语言功底，掌握操作系统知识，拓展知识面。</p>
+<h2 id="第一阶段总结"><a href="#第一阶段总结" class="headerlink" title="第一阶段总结"></a>第一阶段总结</h2><p>第一阶段主要是Rust的基础学习部分，110道题目巩固了不少基础语法知识。让我感觉最有收获的是后面的<br>10道算法题，之前有用Rust刷过一些LeetCode,但用Rust来实现栈，堆，队列等经典数据结构却是从没做过的，这一次有了了解。<br>除了实现数据结构外，这次做题也第一次编写“有意义的”unsafe代码，它终于不再那么神秘莫测了。</p>
+<h2 id="RISC-V"><a href="#RISC-V" class="headerlink" title="RISC-V"></a>RISC-V</h2><p>参加训练营是第一次接触RISC-V，目前正在学习《RISC-V-Reader》。RISC-V有一个很鲜明的特点是模块化，这似乎是技术发展的未来趋势，各种现代编程语言都<br>在使自己模块化，如Java，生活中常用的设备也在模块化，如笔记本电脑，手机，甚至我这个月刚买的小米鱼缸，RISC-V走在了ISA模块化的前沿。</p>
+<h2 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h2><p>目前打算在第二阶段开始前看完《RISC-V-Reader》，之后再补充一些操作系统的知识，为第二阶段的学习做好准备。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/24/2024Rust%E7%B3%BB%E7%BB%9F%E5%BC%80%E6%BA%90%E5%A4%8F%E4%BB%A4%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5Blog-Siricci/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -264,7 +415,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-31 05:46:15" itemprop="dateModified" datetime="2024-05-31T05:46:15+00:00">2024-05-31</time>
+                <time title="Modified: 2024-06-29 04:19:59" itemprop="dateModified" datetime="2024-06-29T04:19:59+00:00">2024-06-29</time>
               </span>
 
           
@@ -350,7 +501,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-31 05:46:15" itemprop="dateModified" datetime="2024-05-31T05:46:15+00:00">2024-05-31</time>
+                <time title="Modified: 2024-06-29 04:19:59" itemprop="dateModified" datetime="2024-06-29T04:19:59+00:00">2024-06-29</time>
               </span>
 
           
@@ -448,7 +599,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-31 05:46:15" itemprop="dateModified" datetime="2024-05-31T05:46:15+00:00">2024-05-31</time>
+                <time title="Modified: 2024-06-29 04:19:59" itemprop="dateModified" datetime="2024-06-29T04:19:59+00:00">2024-06-29</time>
               </span>
 
           
@@ -514,7 +665,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-31 05:46:15" itemprop="dateModified" datetime="2024-05-31T05:46:15+00:00">2024-05-31</time>
+                <time title="Modified: 2024-06-29 04:19:59" itemprop="dateModified" datetime="2024-06-29T04:19:59+00:00">2024-06-29</time>
               </span>
 
           
@@ -605,7 +756,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-31 05:46:15" itemprop="dateModified" datetime="2024-05-31T05:46:15+00:00">2024-05-31</time>
+                <time title="Modified: 2024-06-29 04:19:59" itemprop="dateModified" datetime="2024-06-29T04:19:59+00:00">2024-06-29</time>
               </span>
 
           
@@ -672,7 +823,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-31 05:46:15" itemprop="dateModified" datetime="2024-05-31T05:46:15+00:00">2024-05-31</time>
+                <time title="Modified: 2024-06-29 04:19:59" itemprop="dateModified" datetime="2024-06-29T04:19:59+00:00">2024-06-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -743,7 +894,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/2024/04/24/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93bosswnx/" class="post-title-link" itemprop="url">2024 春夏季开源操作系统训练营第一阶段总结 - Nelson</a>
+            <a href="/blog/2024/04/24/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93bosswnx/" class="post-title-link" itemprop="url">2024 春夏季开源操作系统训练营总结 - Nelson</a>
         </h2>
 
         <div class="post-meta">
@@ -760,7 +911,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-31 05:46:15" itemprop="dateModified" datetime="2024-05-31T05:46:15+00:00">2024-05-31</time>
+                <time title="Modified: 2024-06-29 04:19:59" itemprop="dateModified" datetime="2024-06-29T04:19:59+00:00">2024-06-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -785,7 +936,7 @@
       
           <img src="https://blog.bosswnx.xyz/images/profile.jpg" width="100" height="100">
 
-<p>我其实在去年的时候就对训练营略有耳闻，但是由于在准备算法竞赛，并且对未来研究生的方向还没有一个明确的规划，所以没有参加。而现在，我基本上已经确定了未来要往体系结构和操作系统方向发展，所以第一时间便报名参加了训练营。</p>
+<h2 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h2><p>我其实在去年的时候就对训练营略有耳闻，但是由于在准备算法竞赛，并且对未来研究生的方向还没有一个明确的规划，所以没有参加。而现在，我基本上已经确定了未来要往体系结构和操作系统方向发展，所以第一时间便报名参加了训练营。</p>
 <p>第一阶段学的内容是 Rust。Rust 也是我很喜欢的一门语言，因为他性能高、内存安全、又有良好的包管理器支持，相比于 C、C++，它的语言表达能力更加强大，也有很多好用的语法糖；而相比于 Java、Python 等，它又更为严谨、更贴近硬件。</p>
 <p>经过这一段时间的学习，我越学越觉得 Rust 的很多特性其实是为了给他严格的所有权机制打补丁。最明显的就是生命周期了，还有诸如 <code>unsafe</code> 等。刚好最近同时也在一家公司实习做操作系统内核开发，正在使用 C 语言，因此对这两门语言的风格深有所感：</p>
 <ul>
@@ -793,6 +944,10 @@
 <li>Rust 的原则则是「完全不相信使用者」，所以你会发现 Rust 的很多语法都是为了约束程序员，强迫程序员写出安全的代码。但是，有些时候编译器还是不够聪明，或者说是无法进行判断，因此必须开点绿灯——<code>unsafe</code>。</li>
 </ul>
 <p>在 Rust 身上可以找到很多为了弥补所有权机制而设计的语法，因此在学习的时候才会觉得 Rust 的语法很复杂。不过这种「语言规定好的规范」对于多人之间的项目合作，特别是开源来说，就是一种优势了。相比于 C 语言项目之间可能存在代码风格相差巨大的情况，Rust 写出来的代码基本上不会有太大的风格差异，这样在参考别人的代码，以及贡献代码的时候就会更为轻松。</p>
+<h2 id="第二阶段"><a href="#第二阶段" class="headerlink" title="第二阶段"></a>第二阶段</h2><p>第二阶段开始进入操作系统领域的学习了。训练营采用的是清华大学的 rcore 教程，不过相比原版的 rCore-Tutorial-v3 有了很大的变化，删去了很多不必要的任务，任务的指引也更加清晰，教材方面也根据代码做了很多简化。整体上是更容易上手了。</p>
+<p>在这几章的学习内容中，我认为最难理解的是虚拟地址页表那一章。一开始我一直困惑于“操作系统到底如何分配内存，如何知道地址是否合法的”，后来经过了解才知道，虚拟地址其实是软件和硬件共同实现的，操作系统需要做的是维护页表，而 cpu 会利用操作系统维护的页表，通过硬件来判断地址是否合法，以及将虚拟地址转换为真实的物理地址。所以整个计算机的发展软硬件是不可分开的。</p>
+<p>在完成了第二阶段的学习后，我和队友便着手开始了计算机系统能力大赛的开发。一开始我们是打算基于 arceos 进行开发的，但是了解后才发现 arceos 似乎没有提供一个基础的内核框架，而只是提供了很多的“组件”，而我们此时仅剩下不到两周的时候，根本无法在这么短的时间从头自己写一个内核出来，因此最后还是选择基于训练营第二阶段结束后的 rcore 版本进行开发。</p>
+<p>也是得益于训练营阶段对 rcore 代码深入学习的经历，让我们在两周不到的时间里，完全原创地完成了操作系统比赛初赛的赛题。接下来是复赛，我们打算继续基于初赛的代码，加入虚拟文件系统、无栈协程等特性，为复赛做好准备！</p>
 
       
     </div>
@@ -843,7 +998,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-31 05:46:15" itemprop="dateModified" datetime="2024-05-31T05:46:15+00:00">2024-05-31</time>
+                <time title="Modified: 2024-06-29 04:19:59" itemprop="dateModified" datetime="2024-06-29T04:19:59+00:00">2024-06-29</time>
               </span>
 
           
@@ -858,165 +1013,6 @@
 
       
           <p>rust第一阶段总结：<br>第一阶段主要是对rust语言进行一个系统的学习，并进行rustlings习题的完成，其实前一百道题还好，对于我来说更像完形填空一样，对我来说后十道算法题比较有难度<br>本来算法就比较薄弱，再用不熟悉的语言进行数学，挑战还是相当大的（，不过在第一阶段中，我对于rust的理解有了深一层的概念。相信可以在第二阶段更进一步</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/24/2024%E6%98%A5%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E5%A7%9A%E5%AE%8F%E4%BC%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="rcore-os Group">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rcore-os Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2024/04/24/2024%E6%98%A5%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E5%A7%9A%E5%AE%8F%E4%BC%9F/" class="post-title-link" itemprop="url">2024春开源操作系统训练营第一阶段总结报告-姚宏伟</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-04-24 19:45:59" itemprop="dateCreated datePublished" datetime="2024-04-24T19:45:59+00:00">2024-04-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-31 05:46:15" itemprop="dateModified" datetime="2024-05-31T05:46:15+00:00">2024-05-31</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>#前言</p>
-<p>这并不是我第一次参加了，正如我去年结营仪式上说的，我今年又来了。时光匆匆，下半年就要考研了，目前我依然在猛刷各种竞赛，希望今年能更上一步，有所收获！</p>
-<p>#第一阶段的总结：<br>由于之前已经参加过了，因此前100题非常轻松的就刷掉了，今年多出来了10题算法题，我一直很喜欢用rust写算法，写起来是真的爽，llvm的优化也很爽，甚至能硬生生的将$n^2$的算法给优化成$n*log(n)$的级别，非常逆天。这10道算法题我只在第八题上卡了一会，疑似是workflow评测的bug？反正我本地跑的单元测试都能通过，最终还是整个重写了一遍才过，非常奇怪。于是顺利的在开始的第二天早上写完了110道题。<br>战斗，爽！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/24/csjgg-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="rcore-os Group">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rcore-os Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2024/04/24/csjgg-blog/" class="post-title-link" itemprop="url">csjgg_blog</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-04-24 19:43:22" itemprop="dateCreated datePublished" datetime="2024-04-24T19:43:22+00:00">2024-04-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-31 05:46:15" itemprop="dateModified" datetime="2024-05-31T05:46:15+00:00">2024-05-31</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="一阶段"><a href="#一阶段" class="headerlink" title="一阶段"></a>一阶段</h1><h2 id="Begin"><a href="#Begin" class="headerlink" title="Begin"></a>Begin</h2><p>rust 有趣捏</p>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h3 id="所有权"><a href="#所有权" class="headerlink" title="所有权"></a>所有权</h3><p><strong>关于所有权的规则</strong>：</p>
-<ol>
-<li>Rust 中每一个值都被一个变量所拥有，该变量被称为值的所有者</li>
-<li>一个值同时只能被一个变量所拥有，或者说一个值只能拥有一个所有者</li>
-<li>当所有者(变量)离开作用域范围时，这个值将被丢弃(drop)</li>
-<li>当值不是可copy的,简单的= 做的是move</li>
-<li>如果想要多个变量指向一个值, 通过引用</li>
-<li>mut引用只能有一个, 不可变引用可以很多,两者不能同时存在</li>
-</ol>
-<h3 id="tokio"><a href="#tokio" class="headerlink" title="tokio"></a>tokio</h3><p>貌似没涉及,但是觉得好玩捏</p>
-<ul>
-<li>底层是线程池+调度器</li>
-<li>tokio::spawn 出来的task 类似一种协程, 可以被调度器调度</li>
-<li>每个task 由诸多future组成, future实际上是一种trait, 实现了它的对象可以被poll, poll它的时候是不阻塞的,如果出现io,返回not ready</li>
-<li>每个线程维护task队列, 用完时可以偷取其他线程的</li>
-<li>非阻塞io的底层实现是epoll, 当epoll返回时,调度器会选择调度</li>
-</ul>
-<h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2><p>谢谢THU捏</p>
-<p>太喜欢rust 了</p>
-<h1 id="二阶段"><a href="#二阶段" class="headerlink" title="二阶段"></a>二阶段</h1><p>二阶段的收获确实很大，以前也有写过mit的xv6 lab,看过很多os的书籍，但是从rcore中还是学到了很多。我认为rcore的长处是</p>
-<ul>
-<li>从bare开始构建，这比xv6强的多，写完xv6，也不知道到底怎么从头写一个os，但是rcore教程详细，循序渐进，彻底让我明白如何从裸机构建一个os。收获很大。</li>
-<li>使用rust，比c语言厉害多了，内存安全方面的暂且不提，光是alloc方面我就看的眼花缭乱，先进的语言毕竟还是牛逼啊。</li>
-</ul>
-<p>但是我认为，rcore的练习对我不是那么有吸引力，毕竟在os上修修补补已经是常见的lab手段，我觉得文档，构建过程才是真的精髓。如过可以在文档中空一些代码让学生补全，直接参与构建os,相比会更有吸引力。但是我理解这样做难度肯定上升，不太好让基础不劳的学生学习（这样做的话，我这个ddl战士应该也写不完了）。</p>
-<p>总而言之，我认为rcore真的很棒，我认为是比肩mit了，感谢写rcore的人士，您们真牛。</p>
-<p>日程上，很羞愧，五个lab在三天中赶完，所以感觉也不必要详细记录了，但是可不是我只学了三天，在训练营开始之前我就偶然发现了rcore的文档，基本看了一边，之前也有尝试顺着rcore的教程从头写os（最后只写到第5章。。）感觉还是有点抱歉的，很想参与训练营更多的课程，但是最近学校的事情多，只好做ddl战士了。</p>
 
       
     </div>
@@ -1132,59 +1128,6 @@
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
